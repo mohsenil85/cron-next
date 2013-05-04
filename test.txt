@@ -1,0 +1,2 @@
+# daily
+1  0   *     * * php test
