@@ -2,6 +2,12 @@ import sys, time
 import jobs
 
 def showJobs(job):
+  """
+  first, store a timestamp in the variable `now`.  Then, create a new Job object and 
+  pass the timestamp in.  Each field in the Job object will be converted to seconds
+  and then added to the time stamp to calculate the next time that each job will 
+  run.
+  """
   now = int(time.time())
   try:
     j = jobs.Job(job)
@@ -10,6 +16,11 @@ def showJobs(job):
     pass
 
 def processlines(line):
+  """
+  Iterate through each line in the file, ignoring lines that begin with a hash mark,
+  and split them on spaces.  Collect each word into a list, pre-process it a little,
+  and then call showJobs() on each list.
+  """
   if not line.startswith("#"):
     words = line.split()
     lst = list(words)

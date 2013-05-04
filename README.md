@@ -41,3 +41,13 @@ what exactly happened.  This is the sort of situation where the online help wasn
 very helpful, and it would just be so much easier to just ask someone.  Given more 
 time, I am confident I could have at least solved this.
 
+
+Considerations
+---
+
+I don't feel very good about this code.  Given the chance I would re-write it from
+top to bottom.  Problems that need to be solved are:
+    
+    + Better regex/parsing of the files
+    + Return an object instead of just printing stuff to screen
+    + Calling an object with a list as a parameter is too brittle
